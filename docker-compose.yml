@@ -17,8 +17,8 @@ services:
       - '5432'
       # Where our data will be persisted
     volumes:
-      - my-db:/var/lib/mysql
       - ./scripts/pgsql_init:/docker-entrypoint-initdb.d
+      - ./scripts/data:/data
 # Names our volume
 volumes:
   my-db:
